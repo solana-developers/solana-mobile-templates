@@ -1,0 +1,62 @@
+name: Test Templates
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.number || github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ 20, 22 ]
+        pm: [ npm, pnpm, yarn ]
+        template:
+          [
+            templates/template-expo-basic,
+          ]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure Git identity
+        run: |
+          git config --global user.email "ci-bot@example.com"
+          git config --global user.name "CI Bot"
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install package manager (if needed)
+        run: |
+          case ${{ matrix.pm }} in
+            npm) echo "Using npm";;
+            pnpm) npm install -g pnpm;;
+            yarn) npm install -g yarn;;
+          esac
+
+      - name: Create and Build using create-solana-dapp
+        run: |
+          TEMP_DIR=$(mktemp -d)
+          cd "$TEMP_DIR"
+
+          BRANCH=${GITHUB_REF#refs/heads/}
+
+          case ${{ matrix.pm }} in
+          npm) npx create-solana-dapp@latest --template gh:${{ github.repository }}/${{ matrix.template }}#${BRANCH} sandbox ;;
+          pnpm) pnpx create-solana-dapp@latest --template gh:${{ github.repository }}/${{ matrix.template }}#${BRANCH} sandbox ;;
+          yarn) yarn create solana-dapp --template gh:${{ github.repository }}/${{ matrix.template }}#${BRANCH} sandbox ;;
+          esac
+
+          cd sandbox
+          ${{ matrix.pm }} install
+          ${{ matrix.pm }} run ci
