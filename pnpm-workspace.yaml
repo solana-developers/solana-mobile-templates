@@ -1,2 +1,4 @@
 packages:
-  - 'templates/*'
+  - templates/*
+onlyBuiltDependencies:
+  - unrs-resolver
