@@ -23,7 +23,7 @@ export default function HomeScreen() {
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Solana Mobile!</ThemedText>
+        <ThemedText type="title">Gm Scaffold!</ThemedText>
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
