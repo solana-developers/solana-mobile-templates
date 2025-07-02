@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "web3js-expo",
-    "slug": "web3js-expo",
+    "name": "expo-react-native-paper",
+    "slug": "expo-react-native-paper",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
