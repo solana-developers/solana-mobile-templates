@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "template-expo-basic",
-    "slug": "template-expo-basic",
+    "name": "web3js-expo",
+    "slug": "web3js-expo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -16,7 +16,8 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.beeman.expodemoweb3js"
     },
     "web": {
       "bundler": "metro",
@@ -28,15 +29,27 @@
       [
         "expo-splash-screen",
         {
+          "backgroundColor": "#FFFFFF",
+          "dark": {
+            "backgroundColor": "#000000",
+            "image": "./assets/images/splash-icon.png"
+          },
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "resizeMode": "contain"
         }
-      ]
+      ],
+      "expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "c94f5e96-2411-4010-b470-14068175051d"
+      }
+    },
+    "owner": "beeman"
   }
 }

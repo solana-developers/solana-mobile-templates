@@ -1,2 +1,2 @@
-import './polyfill';
-import 'expo-router/entry';
+import './polyfill'
+import 'expo-router/entry'
