@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "web3js-expo",
-    "slug": "web3js-expo",
+    "name": "web3js-expo-paper",
+    "slug": "web3js-expo-paper",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",

@@ -17,7 +17,7 @@ jobs:
       matrix:
         node: [20, 22]
         pm: [npm, pnpm, yarn]
-        template: [templates/web3js-expo]
+        template: [templates/web3js-expo, templates/web3js-expo-paper]
 
     steps:
       - name: Checkout repository
