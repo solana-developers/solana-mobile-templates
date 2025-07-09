@@ -12,6 +12,7 @@
   "scripts": {
     "android": "expo run:android",
     "android:build": "expo prebuild -p android",
+    "build": "tsc --noEmit && npm run android:build",
     "ci": "tsc --noEmit && npm run lint:check && npm run fmt:check && npm run android:build",
     "dev": "expo start",
     "fmt": "prettier --write .",
