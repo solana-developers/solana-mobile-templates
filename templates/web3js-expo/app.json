@@ -16,8 +16,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true,
-      "package": "com.beeman.expodemoweb3js"
+      "edgeToEdgeEnabled": true
     },
     "web": {
       "bundler": "metro",
@@ -50,7 +49,6 @@
       "eas": {
         "projectId": "c94f5e96-2411-4010-b470-14068175051d"
       }
-    },
-    "owner": "beeman"
+    }
   }
 }
