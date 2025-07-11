@@ -5,7 +5,7 @@ import React from 'react'
 export default function SettingsLayout() {
   return (
     <Stack screenOptions={{ headerTitle: 'Settings', headerRight: () => <WalletUiDropdown /> }}>
-      <Stack.Screen name="settings" />
+      <Stack.Screen name="index" />
     </Stack>
   )
 }
