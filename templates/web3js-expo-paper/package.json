@@ -6,8 +6,7 @@
     "mobile-wallet-adapter",
     "react-native",
     "react-native-paper",
-    "solana",
-    "web3js"
+    "solana-web3js"
   ],
   "create-solana-dapp": {
     "instructions": [

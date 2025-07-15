@@ -5,8 +5,7 @@
     "expo",
     "mobile-wallet-adapter",
     "react-native",
-    "solana",
-    "web3js"
+    "solana-web3js"
   ],
   "create-solana-dapp": {
     "instructions": [
