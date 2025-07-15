@@ -1,5 +1,13 @@
 {
   "name": "web3js-expo",
+  "description": "A template for building a Solana mobile app with Expo and React Native.",
+  "keywords": [
+    "expo",
+    "mobile-wallet-adapter",
+    "react-native",
+    "solana",
+    "web3js"
+  ],
   "create-solana-dapp": {
     "instructions": [
       "To buld the Android app locally, run this:",
