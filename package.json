@@ -1,29 +1,36 @@
 {
   "name": "solana-mobile-templates",
   "version": "1.0.0",
-  "description": "",
+  "description": "Solana Mobile Templates for create-solana-dapp",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules",
-    "fmt": "prettier --write .",
+    "clean": "repokit clean",
+    "generate": "repokit generate",
+    "format": "prettier --write .",
+    "lint": "repokit lint",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "update-deps": "pnpm -r update --latest",
-    "update-template-readmes": "npx esrun ./scripts/create-template-readme.ts",
-    "update-readme": "pnpm update-template-readmes && automd && prettier --write {README.md,**/README.md,templates.json}"
+    "update-deps": "pnpm -r update --latest"
   },
   "keywords": [],
   "author": "Solana Developers",
   "license": "MIT",
   "devDependencies": {
+    "@beeman/repokit": "0.0.0-canary-20250718232759",
     "automd": "^0.4.0",
-    "esrun": "^3.2.30",
     "prettier": "^3.5.3"
   },
-  "templateGroups": [
-    {
-      "description": "Solana Mobile Templates",
-      "directory": "templates",
-      "name": "Solana Mobile"
-    }
-  ]
+  "repokit": {
+    "groups": [
+      {
+        "description": "Solana Mobile Templates",
+        "path": "templates",
+        "name": "Solana Mobile"
+      }
+    ]
+  },
+  "repository": {
+    "name": "solana-developers/solana-mobile-templates",
+    "type": "git",
+    "url": "https://github.com/solana-developers/solana-mobile-templates"
+  }
 }

@@ -4,11 +4,15 @@ Solana Mobile Templates
 
 ### [web3js-expo](templates/web3js-expo)
 
+`gh:solana-developers/solana-mobile-templates/templates/web3js-expo`
+
 > A template for building a Solana mobile app with Expo and React Native.
 
 `expo` `mobile-wallet-adapter` `react-native` `solana-web3js`
 
 ### [web3js-expo-paper](templates/web3js-expo-paper)
+
+`gh:solana-developers/solana-mobile-templates/templates/web3js-expo-paper`
 
 > A template for building a Solana mobile app with Expo and React Native Paper.
 
